@@ -548,7 +548,7 @@
     <string name="basal_short">BAS</string>
     <string name="keep_screen_on_title">Keep screen on</string>
     <string name="keep_screen_on_summary">Prevent Android to turn screen off. It will consume lot of energy when not plugged to power outlet.</string>
-    <!-- 2021-05-27 jehogan: corrected language
+    <!-- 2021-05-27 jehogan: corrected language -->
     <!-- <string name="sensitivity_warning">By turning on Autosense feature remember to enter all eated carbs. Otherwise carbs deviations will be identified wrong as sensitivity change !!</string> -->
     <string name="sensitivity_warning">By turning on Autosense feature remember to enter all consumed carbs. Otherwise carbs deviations will be identified wrong as sensitivity change !!</string>
     <string name="sensitivityweightedaverage">Sensitivity WeightedAverage</string>
