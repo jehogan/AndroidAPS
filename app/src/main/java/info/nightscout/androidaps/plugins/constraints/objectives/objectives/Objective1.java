@@ -24,37 +24,43 @@ public class Objective1 extends Objective {
         tasks.add(new Task(R.string.objectives_useprofileswitch) {
             @Override
             public boolean isCompleted() {
-                return sp.getBoolean(R.string.key_objectiveuseprofileswitch, false);
+//                return sp.getBoolean(R.string.key_objectiveuseprofileswitch, false);
+                return sp.getBoolean(R.string.key_objectiveuseprofileswitch, true);
             }
         });
         tasks.add(new Task(R.string.objectives_usedisconnectpump) {
             @Override
             public boolean isCompleted() {
-                return sp.getBoolean(R.string.key_objectiveusedisconnect, false);
+//                return sp.getBoolean(R.string.key_objectiveusedisconnect, false);
+                return sp.getBoolean(R.string.key_objectiveusedisconnect, true);
             }
         }.hint(new Hint(R.string.disconnectpump_hint)));
         tasks.add(new Task(R.string.objectives_usereconnectpump) {
             @Override
             public boolean isCompleted() {
-                return sp.getBoolean(R.string.key_objectiveusereconnect, false);
+//                return sp.getBoolean(R.string.key_objectiveusereconnect, false);
+                return sp.getBoolean(R.string.key_objectiveusereconnect, true);
             }
         }.hint(new Hint(R.string.disconnectpump_hint)));
         tasks.add(new Task(R.string.objectives_usetemptarget) {
             @Override
             public boolean isCompleted() {
-                return sp.getBoolean(R.string.key_objectiveusetemptarget, false);
+//                return sp.getBoolean(R.string.key_objectiveusetemptarget, false);
+                return sp.getBoolean(R.string.key_objectiveusetemptarget, true);
             }
         }.hint(new Hint(R.string.usetemptarget_hint)));
         tasks.add(new Task(R.string.objectives_useactions) {
             @Override
             public boolean isCompleted() {
-                return sp.getBoolean(R.string.key_objectiveuseactions, false) && actionsPlugin.isEnabled(PluginType.GENERAL) && actionsPlugin.isFragmentVisible();
+//                return sp.getBoolean(R.string.key_objectiveuseactions, false) && actionsPlugin.isEnabled(PluginType.GENERAL) && actionsPlugin.isFragmentVisible();
+                return sp.getBoolean(R.string.key_objectiveuseactions, true) && actionsPlugin.isEnabled(PluginType.GENERAL) && actionsPlugin.isFragmentVisible();
             }
         }.hint(new Hint(R.string.useaction_hint)));
         tasks.add(new Task(R.string.objectives_useloop) {
             @Override
             public boolean isCompleted() {
-                return sp.getBoolean(R.string.key_objectiveuseloop, false);
+//                return sp.getBoolean(R.string.key_objectiveuseloop, false);
+                return sp.getBoolean(R.string.key_objectiveuseloop, true);
             }
         }.hint(new Hint(R.string.useaction_hint)));
         tasks.add(new Task(R.string.objectives_usescale) {

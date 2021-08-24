@@ -21,7 +21,8 @@ public class Objective3 extends Objective {
     @Inject ResourceHelper resourceHelper;
     @Inject NSClientPlugin nsClientPlugin;
 
-    private final int MANUAL_ENACTS_NEEDED = 20;
+//    private final int MANUAL_ENACTS_NEEDED = 20;
+    private final int MANUAL_ENACTS_NEEDED = 1;
 
     @Inject
     public Objective3(HasAndroidInjector injector) {
@@ -32,7 +33,8 @@ public class Objective3 extends Objective {
 
     @Override
     protected void setupTasks(List<Task> tasks) {
-        tasks.add(new MinimumDurationTask(T.days(7).msecs()));
+//        tasks.add(new MinimumDurationTask(T.days(7).msecs()));
+        tasks.add(new MinimumDurationTask(T.mins(1).msecs()));
         tasks.add(new Task(R.string.objectives_manualenacts) {
             @Override
             public boolean isCompleted() {

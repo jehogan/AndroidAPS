@@ -14,6 +14,7 @@ public class Objective7 extends Objective {
 
     @Override
     protected void setupTasks(List<Task> tasks) {
-        tasks.add(new MinimumDurationTask(T.days(7).msecs()));
+//        tasks.add(new MinimumDurationTask(T.days(7).msecs()));
+        tasks.add(new MinimumDurationTask(T.mins(1).msecs()));
     }
 }

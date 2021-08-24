@@ -14,6 +14,7 @@ public class Objective10 extends Objective {
 
     @Override
     protected void setupTasks(List<Task> tasks) {
-        tasks.add(new MinimumDurationTask(T.days(28).msecs()));
+//        tasks.add(new MinimumDurationTask(T.days(28).msecs()));
+        tasks.add(new MinimumDurationTask(T.mins(28).msecs()));
     }
 }
