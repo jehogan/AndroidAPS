@@ -18,6 +18,7 @@ import info.nightscout.androidaps.interfaces.PluginDescription
 import info.nightscout.androidaps.interfaces.PluginType
 import info.nightscout.androidaps.logging.AAPSLogger
 import info.nightscout.androidaps.plugins.general.nsclient.NSUpload
+import info.nightscout.androidaps.plugins.general.overview.notifications.NotificationUserMessage
 import info.nightscout.androidaps.utils.DateUtil
 import info.nightscout.androidaps.utils.T
 import info.nightscout.androidaps.utils.resources.ResourceHelper
@@ -141,6 +142,19 @@ class DexcomPlugin @Inject constructor(
                         }
                 }
             }
+            // 2021-10-17 jehogan: add to alert 9 days after sensor insert to remind to pre-soak if desired
+            if (intent.hasExtra("sensorInsertionTime")) {
+                intent.extras?.let {
+                    val sensorInsertionTime = it.getLong("sensorInsertionTime") * 1000
+                    val now = DateUtil.now()
+                    if (sensorInsertionTime > now - T.days(9).msecs()) {
+                        // display message until acknowledged
+                        val notification = NotificationUserMessage("Test Dexcom Sensor Alert")
+                    }
+                }
+            }
+
+
         } catch (e: Exception) {
             aapsLogger.error("Error while processing intent from Dexcom App", e)
         }
