@@ -43,7 +43,8 @@ class ConfigImpl @Inject constructor(
 
         engineeringMode = engineeringModeSemaphore.exists() && engineeringModeSemaphore.isFile
         unfinishedMode = unfinishedModeSemaphore.exists() && unfinishedModeSemaphore.isFile
-        devBranch = BuildConfig.VERSION.contains("-") || BuildConfig.VERSION.matches(Regex(".*[a-zA-Z]+.*"))
+        // jeh 2023-03-30: comment out to skip dev mode
+        //devBranch = BuildConfig.VERSION.contains("-") || BuildConfig.VERSION.matches(Regex(".*[a-zA-Z]+.*"))
     }
 
     override fun isEngineeringModeOrRelease(): Boolean =
